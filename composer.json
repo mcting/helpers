@@ -1,0 +1,29 @@
+{
+    "name": "mcting/helpers",
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "laravel/framework": "^6.2",
+        "guzzlehttp/guzzle": "^6.5",
+        "php-amqplib/php-amqplib": "^2.11"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.6",
+        "phpunit/phpunit": "^9.0"
+    },
+    "authors": [
+        {
+            "name": "herry",
+            "email": "yuandeng@aliyun.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mcting\\Helpers": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    }
+}
