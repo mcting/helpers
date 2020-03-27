@@ -229,9 +229,9 @@ if (!function_exists("id_card_verify")) {
         $code = ['1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'];
         $checksum = 0;
         for ($i = 0; $i < 17; $i++) {
-            $checksum += $idCard{$i} * $factor[$i];
+            $checksum += $idCard[$i] * $factor[$i];
         }
-        return $code[$checksum % 11] == strtoupper($idCard{17});
+        return $code[$checksum % 11] == strtoupper($idCard[17]);
     }
 }
 
@@ -268,7 +268,7 @@ if (!function_exists("get_id_card_info")) {
         return [
             "birthday" => $birthday,
             "age"      => get_age($birthday),
-            "gender"   => $idCard{16} / 2 ? 1 : 2
+            "gender"   => $idCard[16] / 2 ? 1 : 2
         ];
     }
 }
@@ -593,8 +593,8 @@ if (!function_exists("luhn")) {
         $lastNo = 0;
         for ($i = strlen($cardNo) - 1; $i > 0; $i--) {
             if ($i % 2 == 0) {
-                $n = strval($cardNo{$i} * 2);
-                $lastNo += $n > 10 ? ($n{0} + $n{1}) : $n;
+                $n = strval($cardNo[$i] * 2);
+                $lastNo += $n > 10 ? ($n[0] + $n[1]) : $n;
             } else {
                 $lastNo += $cardNo[$i];
             }
