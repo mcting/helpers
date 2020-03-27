@@ -20,7 +20,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Mcting\\Helpers": "src/"
+            "Mcting\\Helpers\\": "src/"
         },
         "files": [
             "src/helpers.php"
