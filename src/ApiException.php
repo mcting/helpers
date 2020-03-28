@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Mcting\Helpers;
+namespace MuCTS\Helpers;
 
 use Exception;
 use Illuminate\Support\MessageBag;

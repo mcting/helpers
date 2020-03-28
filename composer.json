@@ -1,5 +1,5 @@
 {
-    "name": "mcting/helpers",
+    "name": "mucts/helpers",
     "require": {
         "php": "^7.2",
         "ext-json": "^7.2",
@@ -20,7 +20,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Mcting\\Helpers\\": "src/"
+            "MuCTS\\Helpers\\": "src/"
         },
         "files": [
             "src/helpers.php"
