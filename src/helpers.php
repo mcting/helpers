@@ -575,7 +575,7 @@ if (!function_exists("get_cdn_url")) {
      */
     function get_cdn_url(string $file)
     {
-        $uri = trim(config("services.cdn_url"), "/") . "/" . ltrim($file, "/");
+        $uri = trim(config("app.cdn_url"), "/") . "/" . ltrim($file, "/");
         if (config("app.env") == "production" && preg_match("/^((?!\.min\.(js|css)).)*$/", $file, $a)) {
             $uri = preg_replace("/\.(js|css)$/", ".min.$1", $uri);
         }
