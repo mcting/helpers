@@ -13,4 +13,9 @@ class ModelMakeCommand extends ConsoleModelMakeCommand
             ? $this->resolveStubPath('/stubs/model.pivot.stub')
             : $this->resolveStubPath('/stubs/model.stub');
     }
+
+    protected function resolveStubPath($stub)
+    {
+        return file_exists($customPath = __DIR__ . $stub) ? $customPath : parent::resolveStubPath($stub);
+    }
 }
