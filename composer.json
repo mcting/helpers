@@ -2,12 +2,13 @@
     "name": "mucts/helpers",
     "require": {
         "php": "^7.2",
+        "ext-bcmath": "^7.2",
         "ext-json": "^7.2",
         "ext-openssl": "^7.2",
         "laravel/framework": "^7.0",
         "guzzlehttp/guzzle": "^6.5",
         "php-amqplib/php-amqplib": "^2.11",
-        "ext-bcmath": "^7.2"
+        "grimzy/laravel-mysql-spatial": "^2.1"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",
@@ -26,5 +27,11 @@
         "files": [
             "src/helpers.php"
         ]
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        }
     }
 }

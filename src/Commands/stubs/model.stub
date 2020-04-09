@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use MuCTS\Helpers\Models\Model;
+
+class {{ class }} extends Model
+{
+    //
+}
