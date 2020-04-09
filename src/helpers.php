@@ -267,8 +267,8 @@ if (!function_exists("get_id_card_info")) {
         $birthday = date("Y-m-d", strtotime(substr($idCard, 6, 8)));
         return [
             "birthday" => $birthday,
-            "age"      => get_age($birthday),
-            "gender"   => $idCard[16] / 2 ? 1 : 2
+            "age" => get_age($birthday),
+            "gender" => $idCard[16] / 2 ? 1 : 2
         ];
     }
 }
@@ -396,7 +396,7 @@ if (!function_exists("export_rsa_key")) {
     function export_rsa_key()
     {
         $config = array(
-            "digest_alg"       => "sha512",
+            "digest_alg" => "sha512",
             "private_key_bits" => 4096,           //字节数  512 1024 2048  4096 等
             "private_key_type" => OPENSSL_KEYTYPE_RSA,   //加密类型
         );
@@ -407,7 +407,7 @@ if (!function_exists("export_rsa_key")) {
         openssl_free_key($res);
         return [
             "private_key" => $privateKey,
-            "public_key"  => $publicKey["key"]
+            "public_key" => $publicKey["key"]
         ];
     }
 }
@@ -670,5 +670,23 @@ if (!function_exists("mq_receive")) {
         } catch (Exception $ex) {
             return false;
         }
+    }
+}
+
+if (!function_exists('hashcode')) {
+
+    /**
+     * string to hash code
+     * @param string $str
+     * @return int
+     */
+    function hashcode(string $str): int
+    {
+        $mdv = md5($str);
+        $mdv1 = substr($mdv, 0, 16);
+        $mdv2 = substr($mdv, 16, 16);
+        $crc1 = abs(crc32($mdv1));
+        $crc2 = abs(crc32($mdv2));
+        return intval(bcmul($crc1, $crc2));
     }
 }

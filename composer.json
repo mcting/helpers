@@ -6,7 +6,8 @@
         "ext-openssl": "^7.2",
         "laravel/framework": "^7.0",
         "guzzlehttp/guzzle": "^6.5",
-        "php-amqplib/php-amqplib": "^2.11"
+        "php-amqplib/php-amqplib": "^2.11",
+        "ext-bcmath": "^7.2"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",
