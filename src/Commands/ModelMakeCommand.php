@@ -7,6 +7,8 @@ use Illuminate\Foundation\Console\ModelMakeCommand as ConsoleModelMakeCommand;
 
 class ModelMakeCommand extends ConsoleModelMakeCommand
 {
+    protected $name = 'mucts:make:model';
+
     protected function getStub()
     {
         return $this->option('pivot')
