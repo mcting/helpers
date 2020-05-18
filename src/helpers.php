@@ -690,3 +690,16 @@ if (!function_exists('hashcode')) {
         return intval(bcmul($crc1, $crc2));
     }
 }
+
+if (!function_exists('mb_str_split')) {
+    /**
+     * This function splits a multibyte string into an array of characters. Comparable to str_split().
+     *
+     * @param string $str
+     * @return array
+     */
+    function mb_str_split(string $str): array
+    {
+        return preg_split('/(?<!^)(?!$)/u', $str);
+    }
+}
