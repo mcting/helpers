@@ -1,10 +1,10 @@
 {
     "name": "mucts/helpers",
     "require": {
-        "php": "^7.2",
-        "ext-bcmath": "^7.2",
-        "ext-json": "^7.2",
-        "ext-openssl": "^7.2",
+        "php": ">=7.2",
+        "ext-bcmath": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
         "laravel/framework": "^7.0",
         "guzzlehttp/guzzle": "^6.5"
     },
