@@ -10,7 +10,7 @@
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",
-        "phpunit/phpunit": "^9.0"
+        "phpunit/phpunit": "^8.0|^9.0"
     },
     "authors": [
         {
